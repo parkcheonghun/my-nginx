@@ -11,7 +11,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git url: 'https://github.com/your-username/my-nginx.git', branch: 'main'
+        git url: 'https://github.com/parkcheonghun/my-nginx.git', branch: 'main'
       }
     }
 
@@ -39,4 +39,5 @@ pipeline {
       }
     }
   }
+
 }
