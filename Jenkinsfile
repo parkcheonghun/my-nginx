@@ -19,6 +19,7 @@ pipeline {
       steps {
         withCredentials([file(credentialsId: "${KUBECONFIG_CREDENTIAL_ID}", variable: 'KUBECONFIG_FILE')]) {
           sh '''
+          #!/bin/bash
             export HOME=/var/lib/jenkins
             'mkdir -p $HOME/.kube'
             'cp $KUBECONFIG_FILE $HOME/.kube/config'
